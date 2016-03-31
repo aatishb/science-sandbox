@@ -5,11 +5,13 @@ var warpedcircles = function(p){
   var mult = 1;
   var flag = 1;
   var count = 0;
-  var mySound;
+  //var mySound;
 
+/*
   p.preload = function(){
     mySound = p.loadSound('media/doorbell.mp3');
   }
+*/
 
   p.setup = function() {
 
@@ -19,15 +21,17 @@ var warpedcircles = function(p){
     //p.frameRate(60);
   	p.translate(400/2,400/2);
 
-    mySound.setVolume(0.1);
+    //mySound.setVolume(0.1);
   }
 
   p.draw = function() {
 
     if(isScrolledIntoView('#warpedcircles')){
+      /*
       if(p.frameCount%120==0){
         mySound.play();
       }
+      */
     	p.background(255);
 
     	p.fill(255,255,178);
