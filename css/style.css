@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,300);
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size:17px;
+  font-size:1.2em;
   line-height: 1.5;
   font-weight: 400;
   color: '#444';
@@ -14,7 +14,7 @@ img {
 
 .intro {
    margin-bottom: 24px;
-   font-size: 21px;
+   font-size: 1.5rem;
 }
 
 p {
@@ -76,7 +76,7 @@ a {
 
 blockquote {
 
- font-size: 17px;
+ font-size: 1.2rem;
  font-style: italic;
  margin-bottom: 20px;
  padding-left: 15px;
