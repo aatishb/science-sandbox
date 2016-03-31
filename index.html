@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="UTF-16">
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+
+
+<div class="content">
+
+  <div id="warpedcircles" align="center"></div>
+
+  <div id="title">
+    <h1>Science Sandbox</h1>
+    <h3>An @aatishb science communication experiment.</h3>
+  </div>
+
+    <p class="intro">My name is Aatish Bhatia, and I'm a science communicator and a teacher. This is a place where I'm experimenting with something that's kind of new (well, new to me at least). It's part sandbox, part playground, part lab-in-my-basement, and I'm inviting you to peek in, take a look around, and tell me what you think.</p>
+
+    <p>Here's the basic idea. As a teacher and a writer, I often feel like I'm tugged in two similar but slightly different directions. We all love reading articles that help us understand the world, that feed our curiosity, and give us a glimpse of that deep sense of awe and mystery that comes from better knowing the world. This is the space where I've enjoyed reading articles about science, and on my better days, I've written a few as well.</p>
+
+    <p>But then, in the back of my mind, the teacher in me always has this nagging question. What if there was a way to do more? ...to take science writing a little further? We know from experience that even after listening to the most beautifully articulated presentation of an idea, our memory of it fades over time.</p>
+
+    <p>Decades of research in education (bolstered by a good dose of common sense) has shown that people are likelier to correctly remember new ideas when they engage with it more deeply than just listening, or reading. It's the kindergarden model of eduation that's slowly being adopted by college classes, where students spend more of their time <i>learning by doing</i>. All this research in education shows, quite convincingly, that one way to get the ideas you're communicating to stick is to invite your audience to participate more <i>actively</i> in the act of sense-making.</p>
+
+    <p>And so, the idea of this project is: what if reading an article could be a more interactive experience? What if an online article could be something that invited you to play with it, to poke and prod at it? Could we use the tools of the modern web, tools that allow us to do much more than share words and pictures, to engage an audience more deeply with our story of ideas? The central question of this project is: if we make writing more interactive, are the ideas that we're communicating likelier to stick?</p>
+
+    <p>My hunch is... <i>maybe</i>. It might turn out to not be worth all the extra effort, time, and expertise that it takes to make a story interactive. But it also might. And that's a good enough reason for me to give it a shot. So I've been busy teaching myself as much as I can about how to code and design for the web, and I'm starting to experiment with this mashup of science, writing, code, and pedagogy.</p>
+
+    <p>Quite a few folks have already begun experimenting in this space. Nicky Case is one of the most articulate and talented practicioners of this new craft, and has built amazing playable blog posts like Parable of the Polygons, along with Vi Hart. Here's how Nicky introduces this idea, which they're calling <i>Explorable Explanations</i>.
+
+  	<blockquote><p>"What if a book didn't just give you old facts, but gave you the tools to discover those ideas for yourself, and invent new ideas? What if, while reading a blog post, you could insert your own knowledge, challenge the author's assumptions, and build things the author never even thought of... all inside the blog post itself?</p>
+    <p>What if, in a world where we're asked to constantly consume knowledge, we construct knowledge?</p>
+    <p>Explorable Explanations is an attempt at answering some of those questions. We're a totally unorganized "movement" (if you can even call it that) of artists, programmers, and educators who make things and tools for active learning.
+    "</p></blockquote>
+
+    <p>So, let's go exploring.</p>
+
+    <img src="/media/letsgoexploring.jpg" alt="Calvin Hobbes Let's Go Exploring">
+
+    <h2>Questions?</h2>
+    <p>Get in touch with me over twitter or email.</p>
+
+    <h2>References</h2>
+    <p>You can find the source code for this page here. Feel free to remix it.</p>
+    <p>Spot a typo, or have a suggestion to improve this post? You can edit it here. </p>
+
+  <script src="/js/libraries/p5.js"></script>
+  <script src="/js/libraries/p5.dom.js"></script>
+  <script src="/js/libraries/p5.sound.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+  <script type="text/javascript">
+   function isScrolledIntoView(elem)
+  {
+      var $elem = $(elem);
+      var $window = $(window);
+
+      var docViewTop = $window.scrollTop();
+      var docViewBottom = docViewTop + $window.height();
+
+      var elemTop = $elem.offset().top;
+      var elemBottom = elemTop + $elem.height();
+
+      return ((( elemTop >= docViewTop) && (elemTop <= docViewBottom)) || ((elemBottom >= docViewTop) && (elemBottom <= docViewBottom)));
+  }
+  </script>
+
+  <script type="text/javascript">javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();stats.domElement.style.cssText='position:fixed;left:0;top:0;z-index:10000';document.body.appendChild(stats.domElement);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='//rawgit.com/mrdoob/stats.js/master/build/stats.min.js';document.head.appendChild(script);})()
+  </script>
+
+  <script type="text/javascript" src="/js/sketches/warpedcircles.js"></script>
+  <script type="text/javascript"> new p5(warpedcircles, "warpedcircles"); </script>
+
+</body>
+</html>
