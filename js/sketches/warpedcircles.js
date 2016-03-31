@@ -20,6 +20,7 @@ var warpedcircles = function(p){
 
   p.setup = function() {
 
+    onResize();
     p.createCanvas(width, height);
     p.background(0);
     p.noStroke();
@@ -63,6 +64,10 @@ var warpedcircles = function(p){
 
 
   p.windowResized = function() {
+    onResize();
+  }
+
+  onResize = function(){
     var divWidth = $('#warpedcircles').width();
     if(divWidth < width0){
       var multiplier = divWidth/width0;
@@ -75,8 +80,8 @@ var warpedcircles = function(p){
     }
     p.resizeCanvas(width, height);
     p.translate(width/2,height/2);
-  }
 
+  }
 
   makeShape = function(size){
 
