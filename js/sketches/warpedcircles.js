@@ -5,6 +5,11 @@ var warpedcircles = function(p){
   var mult = 1;
   var flag = 1;
   var count = 0;
+  var width = 400;
+  var height = 400;
+  var width0 = width;
+  var height0 = height;
+  var increment;
   //var mySound;
 
 /*
@@ -15,11 +20,11 @@ var warpedcircles = function(p){
 
   p.setup = function() {
 
-    p.createCanvas(400, 400);
+    p.createCanvas(width, height);
     p.background(0);
     p.noStroke();
     //p.frameRate(60);
-  	p.translate(400/2,400/2);
+  	p.translate(width/2,height/2);
 
     //mySound.setVolume(0.1);
   }
@@ -34,17 +39,18 @@ var warpedcircles = function(p){
       */
     	p.background(255);
 
+      increment = width/10;
+
     	p.fill(255,255,178);
-    	makeShape(200);
+    	makeShape(5*increment);
     	p.fill(254,204,92);
-    	makeShape(160);
+    	makeShape(4*increment);
     	p.fill(253,141,60);
-    	makeShape(120);
-    	//fill(227,26,28);
+    	makeShape(3*increment);
     	p.fill(240,59,32)
-    	makeShape(80);
+    	makeShape(2*increment);
     	p.fill(189,0,38);
-    	makeShape(40);
+    	makeShape(increment);
 
       if(phase>2){
         phase = -2;
@@ -55,6 +61,21 @@ var warpedcircles = function(p){
     }
   }
 
+
+  p.windowResized = function() {
+    var divWidth = $('#warpedcircles').width();
+    if(divWidth < width0){
+      var multiplier = divWidth/width0;
+      width = multiplier*width0;
+      height = multiplier*height0;
+    }
+    else{
+      width =  width0;
+      height = height0;
+    }
+    p.resizeCanvas(width, height);
+    p.translate(width/2,height/2);
+  }
 
 
   makeShape = function(size){
